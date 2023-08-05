@@ -4,7 +4,9 @@
  
   # clear-screen 
 
-  Clear your terminal screen on Linux, Windows, and MacOS in Python! Feel free to request or add support for more operating systems. :gem:
+  Clear your terminal screen on Linux, Windows, and MacOS in Python! 
+  
+  Feel free to request or add support for more operating systems. :gem:
   
   <!--
   <a href="https://twitter.com/OliviaGalluccii">![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)</a>
