@@ -1,13 +1,12 @@
-import platform
 import os
 
  def clear_screen():
-        system = platform.system()
-        if system == 'Windows':
+        os_name = os.name # https://github.com/python/cpython/blob/main/Lib/os.py#L6
+        if os_name == 'nt':
             os.system('cls')
 
-        elif system == 'Linux' or system == 'Darwin':
-            os.system('clear')
+        elif os_name == 'posix':
+            os.system('printf "\033c"') # https://stackoverflow.com/questions/24754406/how-can-you-clear-reset-the-screen-in-unix-posix-not-curses-newlines
         else:
             # unsupported OS
             print("Unsupported OS - feel free to add support for this OS at ")
