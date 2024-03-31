@@ -2,7 +2,7 @@
 Help on clear-screen.py:
 
 NAME
-    clear-screen.py
+    clear_screen.py
 
 DESCRIPTION
     clear-screen is a Python module that detects the host operating system
