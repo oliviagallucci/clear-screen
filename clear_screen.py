@@ -36,4 +36,13 @@ def clear_screen():
       print("https://github.com/oliviagallucci/clear-screen/")
       return False
    return True
-          
+
+if __name__ == "__main__":
+    """
+    DESCRIPTION
+        clear_screen.py: Detects the host operating system and clears a terminals text history
+
+    CLI USAGE
+        python3 clear_screen.py
+    """
+    clear_screen()
