@@ -27,7 +27,7 @@ def clear_screen():
        Success == True
    """
    # https://github.com/python/cpython/blob/main/Lib/os.py#L6
-   if os.name == 'nt':
+   if os.name in ("nt", "dos", "ce"):
       os.system('cls')
    elif os.name == 'posix':
       os.system('printf "\033c"') # https://stackoverflow.com/questions/24754406/how-can-you-clear-reset-the-screen-in-unix-posix-not-curses-newlines
