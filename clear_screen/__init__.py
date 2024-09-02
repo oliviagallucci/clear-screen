@@ -1,6 +1,4 @@
 """
-Help on clear-screen.py:
-
 NAME
     clear_screen.py
 
@@ -18,13 +16,14 @@ import os
 
 def clear_screen():
    """
-   clear_screen uses os.name to detect the operating system then
-   uses os.system to execute the appropriate terminal command for clearing the screen
+   DESCRIPTION
+       clear_screen uses os.name to detect the operating system then
+       uses os.system to execute the appropriate terminal command for clearing the screen
 
-   Args:
-       None
-   Returns:
-       Success == True
+       Args:
+           None
+       Returns:
+           Success == True
    """
    # https://github.com/python/cpython/blob/main/Lib/os.py#L6
    if os.name in ("nt", "dos", "ce"):
