@@ -8,7 +8,7 @@ class TestClearScreen(unittest.TestCase):
     @patch('clear_screen.os.system')
     def test_clear_screen_linux(self, mock_system):
         clear_screen()
-        mock_system.assert_called_once_with('clear')
+        mock_system.assert_called_once_with('printf')
 
     @patch('clear_screen.os.name', 'nt')
     @patch('clear_screen.os.system')
