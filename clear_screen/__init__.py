@@ -1,6 +1,4 @@
 """
-Help on clear-screen.py:
-
 NAME
     clear_screen.py
 
@@ -18,22 +16,23 @@ import os
 
 def clear_screen():
    """
-   clear_screen uses os.name to detect the operating system then
-   uses os.system to execute the appropriate terminal command for clearing the screen
+   DESCRIPTION
+       clear_screen uses os.name to detect the operating system then
+       uses os.system to execute the appropriate terminal command for clearing the screen
 
-   Args:
-       None
-   Returns:
-       Success == True
+       Args:
+           None
+       Returns:
+           Success == True
    """
    # https://github.com/python/cpython/blob/main/Lib/os.py#L6
-   if os.name == 'nt':
+   if os.name in ("nt", "dos", "ce"):
       os.system('cls')
    elif os.name == 'posix':
       os.system('printf "\033c"') # https://stackoverflow.com/questions/24754406/how-can-you-clear-reset-the-screen-in-unix-posix-not-curses-newlines
    else:
-      print("Unsupported OS - feel free to add support for this OS at ")
-      print("https://github.com/oliviagallucci/clear-screen/")
+      print("Unsupported OS - feel free to add support for this OS at ", file=os.sys.stderr)
+      print("https://github.com/oliviagallucci/clear-screen/", file=os.sys.stderr)
       return False
    return True
 
